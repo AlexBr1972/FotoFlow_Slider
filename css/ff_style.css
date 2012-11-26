@@ -1,0 +1,144 @@
+/*
+    Document   : ff_style
+    Created on : 01.11.2012
+    Author     : Alexey Broslavets
+    Description:
+        Здесь заданы стили относящиеся непосредственно к слайдшоу FotoFlow Slider
+*/
+
+
+
+/*Внешний вид контенера слайдов*/
+.ff_slideshow{
+    position: relative;
+    width: 800px;
+    height: 420px;
+    margin-top: 30px;
+    left: 50%;
+    margin-left: -400px;
+    padding: 0px;
+    border: 1px lightgray solid;
+    box-shadow: 0px 0px 15px black;
+    overflow: hidden;
+}
+
+/*Внешний вид временной линии*/
+#timeline{
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    height: 3px;
+    width: 0%;
+    background-color: rgba(200,200,200,0.8);
+    z-index: 1100;
+    margin: 0px;
+    margin-top: -5px;
+    box-shadow: 0 0 5px black;
+}
+
+/*Анимация временной линии - ключевые кадры. Сама анимация запускается в плагине*/
+@-webkit-keyframes time_line_anim{
+    0% {width: 0%}
+    100% {width: 100%}
+}
+
+@-moz-keyframes time_line_anim{
+    0% {width: 0%}
+    100% {width: 100%}
+}
+
+@-o-keyframes time_line_anim{
+    0% {width: 0%}
+    100% {width: 100%}
+}
+
+@keyframes time_line_anim{
+    0% {width: 0%}
+    100% {width: 100%}
+
+}
+
+
+/*Ниже - стили элементов управления, создаваемых плагином*/
+
+/*Контейнер элементов управления*/
+#nav_btns{
+  display: none;
+  position: absolute;
+  top: 100%;
+  height: 42px;
+  width: 100%;
+  margin-top: -60px;
+  left: 0%;
+  padding: 0px;
+  z-index: 1100;
+}
+
+/*Сами элементы*/
+#start_ff_btn, #stop_ff_btn, #next_ff_btn, #prev_ff_btn{
+    position: relative;
+    width: 80px;
+
+    margin: 0px;
+    height: 40px;
+    border: 1px whitesmoke solid;
+
+    color: olivedrab;
+
+    cursor: pointer;
+
+}
+
+#start_ff_btn:hover, #stop_ff_btn:hover, #next_ff_btn:hover, #prev_ff_btn:hover{
+
+    border:  1px rgb(100,100,100) solid;
+
+
+}
+
+
+#start_ff_btn:active, #stop_ff_btn:active, #next_ff_btn:active, #prev_ff_btn:active{
+
+
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    top: 0px;
+}
+
+#prev_ff_btn{
+    top: 0px;
+    float: left;
+    background: url(../icons/backward32v2.png) no-repeat, url(../img/bg2.jpg);
+    background-position: center center;
+
+}
+
+#next_ff_btn{
+    float: right;
+    top: 0px;
+    background: url("../icons/forward32v2.png") no-repeat, url(../img/bg2.jpg);
+    background-position: center center;
+
+}
+
+#start_ff_btn{
+/*    display: none;*/
+    left: 50%;
+    margin-left: -40px;
+    background: url("../icons/play32v2.png") no-repeat, url(../img/bg2.jpg);
+    background-position: center center;
+
+}
+
+#stop_ff_btn{
+/*    display: none;*/
+    left: 50%;
+    margin-left: -40px;
+    background: url("../icons/pause32v2.png") no-repeat, url(../img/bg2.jpg);
+    background-position: center center;
+
+}
+

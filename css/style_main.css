@@ -1,0 +1,200 @@
+/*
+    Document   : style_main
+    Created on : 01.11.2012
+    Author     : Alexey Broslavets
+    Description:
+        Здесь заданы стили для демо-страницы слайдшоу FotoFlow Slider
+*/
+
+
+body{
+    background-color:  dimgray;
+    background-image: url(../img/bg3.jpg);
+font-family: 'PT Sans Narrow', sans-serif;
+font-weight: 300;
+margin: 10px;
+padding: 0px;
+
+}
+.header_box{
+ position: relative;
+ text-align: left;
+ width: 850px;
+ left: 50%;
+ margin-left: -425px;
+ display: block;
+ box-shadow: 0px 0px 7px black inset;
+ background-color: rgba(200,200,200,1);
+ border: 1px whitesmoke solid;
+ background-image: url(../img/bg2.jpg);
+}
+.header1 {
+ display: inline-block;
+ margin: 0px;
+ padding-left: 30px;
+ color:  rgba(0,190,0,1);
+ font-size: 40px;
+ font-weight: 500;
+ text-shadow: 0px 1px 1px white, 0px -1px 1px rgba(50,50,50,.7);
+
+}
+
+ a{
+ text-align: right;
+ display: inline-block;
+ margin: 10px;
+ float: right;
+ padding: 5px;
+ color:  darkgreen;
+ font-size: 17px;
+ font-weight: 100;
+ text-shadow: 0px 1px 1px white;
+ text-decoration: none;
+ border: 1px rgba(0,0,0,0) solid;
+ border-radius: 5px;
+}
+
+ a:hover{
+   border: 1px gray solid;
+   background-color: rgba(220,220,220,.5);
+   box-shadow: 0 0 5px gray;
+   -webkit-transition: 300ms linear;
+   -moz-transition: 300ms linear;
+   -o-transition: 300ms linear;
+   -ms-transition: 300ms linear;
+   transition: 300ms linear;
+}
+
+
+.header_box #links a:active{
+    background-color: rgba(200,200,200,1);
+    color: black;
+    box-shadow: 0 0 1px gray ;
+    -webkit-transition: 0ms linear;
+    -moz-transition: 0ms linear;
+    -o-transition: 0ms linear;
+    -ms-transition: 0ms linear;
+     transition: 0ms linear;
+}
+
+#settings{
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    border: 1px gray solid;
+    box-shadow: 0 0 10px gray;
+    background-image: url(../img/bg2.jpg);
+    width: 850px;
+    left: 50%;
+    margin-left: -425px;
+}
+#settings > div{
+    text-align: center;
+    width: auto;
+    color: rgba(20,20,20,.9);
+    padding-bottom: 2px;
+    margin-top: 0px;
+    margin-left: 0px;
+    font-size: 24px;
+    text-shadow: 0px 1px 1px white, 0px -1px 1px rgba(50,50,50,.7);
+    border-bottom: 1px rgb(90,90,90) dashed;
+    box-shadow: 0 1px 10px gray;
+}
+
+#settings fieldset{
+    position: relative;
+    width: auto;
+    display: inline-block;
+    color: rgba(20,20,20,.9);
+    margin: 0px;
+    margin-left: 0px;
+    font-size: 18px;
+    text-shadow: 0px 1px 1px white, 0px -1px 1px rgba(50,50,50,.7);
+    border: none;
+}
+
+#settings input{
+    margin: 0px;
+    display: none;
+}
+
+#settings input + label{
+position: relative;
+color:  olivedrab;
+font-size: 16px;
+font-weight: 400;
+text-align: center;
+ width: auto;
+ height: auto;
+ margin: 0px;
+ padding-top: 3px;
+ padding-bottom: 3px;
+ padding-left: 6px;
+ padding-right: 6px;
+ border: 1px  white solid;
+ color:  darkgreen;
+ box-shadow: 0 0 1px black;
+ float: left;
+ text-shadow: 0 0px 1px gray;
+}
+
+#settings label:first-of-type{
+    border-radius: 4px 0 0 4px;
+}
+#settings label:last-of-type{
+    border-radius: 0 4px 4px 0;
+}
+
+#settings input:checked + label{
+     box-shadow: 0 0 5px black inset;
+     color: olive;
+}
+#settings input + label:hover{
+      box-shadow: 0 0 3px black;
+      cursor: pointer;
+      z-index: 10;
+}
+#settings input:checked + label:hover{
+    box-shadow: 0 0 5px black inset;
+}
+#settings input + label:active{
+      box-shadow: 0 0 1px black;
+}
+#scale_val {
+    margin: 2px;
+}
+input#circle + label, input#speed_rand + label {
+    margin-left: 2px;
+}
+input#downscale:active + label, input#upscale:active + label{
+    box-shadow: 0 0 5px black inset;
+}
+#ef_speed_val {
+    margin: 2px;
+}
+input#downspeed:active + label, input#upspeed:active + label, fieldset#ctrl_exmpl label:active{
+    box-shadow: 0 0 5px black inset;
+}
+
+#photos_note{
+    position: relative;
+    width: 600px;
+    left: 50%;
+    margin-left: -300px;
+    text-align: center;
+}
+
+#photos_note a{
+    float: none;
+}
+
+#hor_adv{
+    position: relative;
+    width: 800px;
+    left: 50%;
+    margin-left: -400px;
+    margin-top: 20px;
+    text-align: center;
+    background: gray;
+}

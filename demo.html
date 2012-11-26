@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+    <head>
+        <title>FotoFlow Slider - настраиваемое слайдшоу для сайта на CSS3 и jQuery. Демонстрационная страница</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+
+        <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+        <script type="text/javascript" src="jquery.fotoflow.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+        <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+        <link  href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+        <link href="css/style_main.css" type="text/css" rel="stylesheet" />
+        <link href="css/ff_style.css" type="text/css" rel="stylesheet" />
+
+    </head>
+    <body>
+
+
+
+
+        <div class="header_box">
+            <div class="header1">FotoFlow Slider - jquery-плагин</div>
+            <span id="links"><a href="#">лицензия</a><a href="#">скачать</a><a href="http://www.broslavets.ru/blog/fotoflow-slider/" target="_blank">документация</a></span>
+        </div>
+<form name="settings" id="settings" >
+
+        <div>Меняя настройки слайдшоу можно получить различные эффекты</div>
+
+                <fieldset id="sett_fldst">
+                    <div>Тип элементов</div>
+                    <input type="radio" id="boxes" name="el_type" value="boxes" />
+                    <label for="boxes" >Квадраты</label>
+                    <input type="radio" id="bars" name="el_type" value="bars"  />
+                    <label for="bars" >Полоски</label>
+                    <input type="radio" id="circles" name="el_type" value="circles"  />
+                    <label for="circles" >Окружности</label>
+                    <input type="radio" id="fullslide" name="el_type" value="fullslide"  />
+                    <label for="fullslide" >Весь слайд</label>
+                </fieldset>
+                <fieldset>
+                   <div>Начальное состояние элемента</div>
+                    <input type="text" id="scale" name="el_form" value="1.0" size="3" maxlength="3" />
+                    <label for="scale" title="Для установки значения можно использовать колесико мыши" >Масштаб: <span id="scale_val" >1.0</span></label>
+                    <input type="button" id="upscale" name="el_form" />
+                    <label for="upscale" style='font-weight: 600' title="Для установки значения можно использовать колесико мыши"> &#8743; </label>
+                    <input type="button" id="downscale" name="el_form" />
+                    <label for="downscale" style='font-weight: 600' title="Для установки значения можно использовать колесико мыши">&#8744;</label>
+                    <input type="checkbox" id="circle" name="el_form" value="circle"  />
+                    <label for="circle" >Круг</label>
+               </fieldset>
+               <fieldset>
+                    <div>Размер элементов</div>
+                    <input type="radio" id="small" name="el_size" value="small"  />
+                    <label for="small" >Маленький</label>
+                    <input type="radio" id="medium" name="el_size" value="medium" checked="checked" />
+                    <label for="medium" >Средний</label>
+                    <input type="radio" id="large" name="el_size" value="large"  />
+                    <label for="large" >Большой</label>
+               </fieldset>
+               <fieldset>
+                   <div>Направление эффекта</div>
+                    <input type="radio" id="left" name="el_dir" value="left"  />
+                    <label for="left" >Слева направо</label>
+                    <input type="radio" id="top" name="el_dir" value="top"  />
+                    <label for="top" >Сверху вниз</label>
+                    <input type="radio" id="left-top" name="el_dir" value="left-top" checked="checked" />
+                    <label for="left-top" >Из левого верхнего угла</label>
+                    <input type="radio" id="random" name="el_dir" value="random"  />
+                    <label for="random" >Случайно</label>
+               </fieldset>
+               <fieldset>
+                   <div>Задержка между слайдами </div>
+                    <input type="radio" id="delay3_btn" name="delay" value="3000"  />
+                    <label for="delay3_btn" >3 сек.</label>
+                    <input type="radio" id="delay5_btn" name="delay" value="5000"  />
+                    <label for="delay5_btn" >5 сек.</label>
+                    <input type="radio" id="delay7_btn" name="delay" value="7000"  />
+                    <label for="delay7_btn" >7 сек.</label>
+                    <input type="radio" id="delay10_btn" name="delay" value="10000"  />
+                    <label for="delay10_btn" >10 сек.</label>
+                    <input type="checkbox" id="timeline_btn" name="timeline_btn" value="timeline"  />
+                    <label for="timeline_btn" >Показать шкалу</label>
+               </fieldset>
+               <fieldset>
+                   <div>Замедление скорости эффекта</div>
+                    <input type="text" id="ef_speed" name="ef_speed" value="1.0" size="3" maxlength="3" />
+                    <label for="ef_speed" title="Для установки значения можно использовать колесико мыши. Большее значение - медленнее эффект">Коэффициент: <span id="ef_speed_val" >1.0</span></label>
+                    <input type="button" id="upspeed" name="ef_speed" />
+                    <label for="upspeed" style='font-weight: 600' title="Для установки значения можно использовать колесико мыши. Большее значение - медленнее эффект"> &#8743; </label>
+                    <input type="button" id="downspeed" name="ef_speed" />
+                    <label for="downspeed" style='font-weight: 600' title="Для установки значения можно использовать колесико мыши. Большее значение - медленнее эффект">&#8744;</label>
+                    <input type="checkbox" id="speed_rand" name="ef_speed" value="false"  />
+                    <label for="speed_rand" title="Добавляет немного случаности к скорости эффекта. При этом желательно увеличить коэффициент слева, чтобы результат был заметнее">Добавить неравномерность</label>
+
+               </fieldset>
+        <fieldset id="ctrl_exmpl">
+                   <div>Пример элементов управления</div>
+                    <input type="text" id="prev_exmpl" name="ctrl_exmpl" value="Назад"  />
+                    <label for="prev_exmpl" >Назад </label>
+                    <input type="text" id="start_exmpl" name="ctrl_exmpl" />
+                    <label for="start_exmpl" > Старт </label>
+                    <input type="text" id="stop_exmpl" name="ctrl_exmpl" />
+                    <label for="stop_exmpl" >Пауза</label>
+                    <input type="text" id="prev_exmpl" name="ctrl_exmpl" value="Вперед"  />
+                    <label for="prev_exmpl" >Вперёд</label>
+
+               </fieldset>
+
+</form>
+
+
+
+
+
+
+<div  id="slides">
+    <img src="photos/burano_800.jpg">
+    <img src="photos/coliseum_high_800.jpg">
+    <img src="photos/venice_800.jpg">
+    <img src="photos/vaticano_800.jpg">
+    <img src="photos/firenze_800.jpg">
+    <img src="photos/rome_high_800.jpg">
+    <img src="photos/italy_800.jpg">
+    <img src="photos/venice_dawn_800.jpg">
+    <img src="photos/milano_800.jpg">
+    <img src="photos/venice_pano_800.jpg">
+</div>
+
+        <div id="photos_note">Фотографии Италии взяты с сайта <a href="http://www.italyphotos.ru" target="_blank">ItalyPhotos.Ru</a></div>
+        
+        
+
+
+    </body>
+</html>
